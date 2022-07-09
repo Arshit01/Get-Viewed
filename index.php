@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get-Viewed</title>
 
+    <link rel="icon" type="image/png" href="img/favicon.ico"/>
+
     <!-- JavaScript -->
-    <script src="C:\xampp\htdocs\Get-viewed\js\bootstrap.min.js" type="text/javascript"></script>
+    <!-- <script src="js\bootstrap.min.js" type="text/javascript"></script> -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> -->
 
 </head>
 
