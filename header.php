@@ -36,7 +36,7 @@
             <div>
                 <ul class="nav-list">
                     <li class="nav-list-item"><a href="#"><i class="gv-login"></i>Login</a></li>
-                    <hr>
+                    <hr/>
                     <li class="nav-list-item"><a href="#"><i class="gv-signup"></i>Sign Up</a></li>
                 </ul>
             </div>
