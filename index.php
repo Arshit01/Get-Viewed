@@ -12,7 +12,7 @@
     <!-- <script src="js\bootstrap.min.js" type="text/javascript"></script> -->
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/> -->
 
 </head>
 

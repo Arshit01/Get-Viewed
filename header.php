@@ -6,8 +6,8 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/header.css" type="text/css">
-    <link rel="stylesheet" href="css/gv.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css"/>
+    <link rel="stylesheet" href="css/gv.css" type="text/css"/>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <!-- logo -->
             <div class="logo">
                 <a href="index.php">
-                    <img src="img/logo.png" alt="Logo">
+                    <img src="img/logo.png" alt="Logo"/>
                     Get-Viewed
                 </a>
             </div>
