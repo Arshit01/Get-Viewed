@@ -6,8 +6,8 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/header.css" type="text/css"/>
-    <link rel="stylesheet" href="css/gv.css" type="text/css"/>
+    <link rel="stylesheet" href="css/header.css" type="text/css" />
+    <link rel="stylesheet" href="css/gv.css" type="text/css" />
 </head>
 
 <body>
@@ -17,16 +17,16 @@
             <!-- logo -->
             <div class="logo">
                 <a href="index.php">
-                    <img src="img/logo.png" alt="Logo"/>
-                    Get-Viewed
+                    <img src="img/logo.png" alt="Logo" />
+                    <p>Get-Viewed</p>
                 </a>
             </div>
             <!-- //logo -->
             <!-- navigation -->
             <div class="toggler">
                 <ul class="nav-list">
-                    <li class="nav-list-item"><a href="#">Home</a></li>
-                    <li class="nav-list-item"><a href="#">About</a></li>
+                    <li class="nav-list-item"><a href="#about">About</a></li>
+                    <li class="nav-list-item"><a href="#">How it works ?</a></li>
                     <li class="nav-list-item"><a href="#">Pricing</a></li>
                     <li class="nav-list-item"><a href="#">Contact</a></li>
                 </ul>
@@ -35,9 +35,7 @@
             <!-- Account -->
             <div>
                 <ul class="nav-list">
-                    <li class="nav-list-item"><a href="#"><i class="gv-login"></i>Login</a></li>
-                    <hr/>
-                    <li class="nav-list-item"><a href="#"><i class="gv-signup"></i>Sign Up</a></li>
+                    <li class="nav-list-item"><a href="signup.php"><i class="gv-signup"></i>Sign Up</a></li>
                 </ul>
             </div>
             <!-- //Account -->

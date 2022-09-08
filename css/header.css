@@ -1,12 +1,25 @@
+@font-face {
+    font-family: 'Westack';
+    src: url('../fonts/Westack.woff2') format('woff2'),
+        url('../fonts/Westack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
-	margin: 0;
-	padding: 0
+    margin: 0;
+    padding: 0
 }
 
 body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
     background-color: #3f4855;
+}
+
+header {
+    position: sticky;
+    top: 0;
 }
 
 nav {
@@ -15,6 +28,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(to top, #3f4855, #3a4350, #343d4a, #2f3845, #2a3340);
+    padding: 0px 10px;
 }
 
 .logo {
@@ -24,7 +38,8 @@ nav {
 .logo a {
     text-decoration: none;
     color: #00c9b7;
-    font-size: 25px;
+    font-family: 'Westack';
+    font-size: 23px;
     font-weight: 450;
     display: grid;
 }
@@ -46,11 +61,11 @@ nav {
 .nav-list-item {
     list-style: none;
     margin: 1rem;
-	transition: .5s;
+    transition: .5s;
 }
 
 .nav-list-item:hover {
-	transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 .nav-list-item a {
@@ -60,8 +75,8 @@ nav {
 }
 
 .nav-list-item a i {
-	padding: 5px;
-	font-size: 15px;
+    padding: 5px;
+    font-size: 15px;
 }
 
 hr {
