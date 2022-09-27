@@ -3,7 +3,8 @@
 
 <head>
     <!-- JavaScript -->
-
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/header.css" type="text/css" />
@@ -26,7 +27,7 @@
             <div class="toggler">
                 <ul class="nav-list">
                     <li class="nav-list-item"><a href="#about">About</a></li>
-                    <li class="nav-list-item"><a href="#">How it works ?</a></li>
+                    <li class="nav-list-item"><a href="#hiw">How it works ?</a></li>
                     <li class="nav-list-item"><a href="#">Pricing</a></li>
                     <li class="nav-list-item"><a href="#">Contact</a></li>
                 </ul>

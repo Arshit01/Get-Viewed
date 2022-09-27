@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_SESSION['UID'])) {
+            header('location: dashboard.php');
+            die();
+    }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +31,7 @@
                         <i class="uil uil-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <input type="text" name="email" placeholder="Enter your email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
@@ -58,13 +65,13 @@
             <div class="form login">
                 <span class="title">Login</span>
 
-                <form method="POST" action="signup.php">
+                <form method="POST" action="login.php">
                     <div class="input-field">
-                        <input type="email" placeholder="Enter your email" required>
+                        <input type="text" name="lemail" placeholder="Enter your email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <input type="password" class="password" name="lpassword" placeholder="Enter your password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -92,60 +99,58 @@
 
         </div>
     </div>
-    <?php
-
+<?php
     include 'config.php';
 
-    function signup() {
-        global $con;
+    if (isset($_POST['signup'])) {
 
         $uname = $_POST['uname'];
     	$email = $_POST['email'];
     	$password = $_POST['password'];
     	$cpassword = $_POST['cpassword'];
 
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            if($password == $cpassword) {
+        $select = "SELECT * FROM `users` WHERE `email` = '$email'";
+        $res = mysqli_query($con,$select);
 
-                $hash = password_hash($password, PASSWORD_DEFAULT);
+        $count = mysqli_num_rows($res);
 
-                $insert = "INSERT INTO `users`(`user_name`, `email`, `password`,`GVC`) VALUES ('$uname','$email','$hash','100')";
+        $regex = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/";
+        $flag = preg_match($regex, $password);
 
-                $result = mysqli_query($con, $insert);
+        if (filter_var($email, FILTER_VALIDATE_EMAIL) && $count == 0) {
+            if ($flag) {
+                if($password == $cpassword) {
 
-                if ($result) {
-?>
-                          <script type="text/javascript">
-                              if (confirm("Your account has been successfully created.\nLogin to confirm registration.")) {
-                                  var element = document.querySelector(".container");
-                                  element.classList.add("active");
-                              }
-                          </script>
-<?php
+                    $hash = password_hash($password, PASSWORD_DEFAULT);
+
+                    $insert = "INSERT INTO `users`(`user_name`, `email`, `password`,`GVC`) VALUES ('$uname','$email','$hash',100)";
+
+                    $result = mysqli_query($con, $insert);
+
+                    if ($result) {
+                        ?>
+                        <script type="text/javascript">
+                        if (confirm("Your account has been successfully created.\nLogin to confirm registration.")) {
+                            var element = document.querySelector(".container");
+                            element.classList.add("active");
+                        }
+                        </script>
+                        <?php
+                    }
+                }
+                else {
+                    echo '<script>alert("Passwords do not match!");location.replace("signup.php");</script>';
                 }
             }
             else {
-                echo '<script>alert("Passwords do not match!");location.replace("signup.php");</script>';
+                echo '<script>alert("Password must be at least 8 characters in length and must contain at least one number, one upper case letter, one lower case letter and one special character.");location.replace("signup.php");</script>';
             }
         }
         else {
             echo '<script>alert("Email is incorrect!");location.replace("signup.php");</script>';
         }
     }
-    function login(){
-
-        if (isset($_POST['login'])) {
-            echo `<script>alert("Login")</script>`;
-        }
-    }
-
-    if (isset($_POST['signup'])) {
-        signup();
-    }
-    else {
-        login();
-    }
-    ?>
+?>
     <script src="js/credential.js"></script>
 
 </body>

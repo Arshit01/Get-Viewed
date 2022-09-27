@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_SESSION['UID'])) {
+            header('location: dashboard.php');
+            die();
+    }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +34,7 @@
         <a class="floating" href="signup.php"><i class="gv-signup"></i>Sign Up</a>
     </div>
     <div id="about">
-        <h1>About Us</h1>
+        <h1 class="heading">About Us</h1>
         <p>
             Get-Viewed is an user based traffic exchange. Joining our system, you can receive tens of thousands of viewes per day from thousands of members around the world. We offer many options that you can flexibly configure your videos and fully
             control the traffic in your way.
@@ -40,7 +47,29 @@
         </p>
     </div>
     <div id="hiw">
-                
+        <h1 class="heading">How it works ?</h1>
+        <div class="how">
+            <div class="step">
+                <h1 class="num">1</h1>
+                <h2>Sign Up For Free</h2>
+                <p>Only with a valid email, an easy-to-remember and strong password, you can create an account at Get-Viewed easily, quickly and thoroughly free. Just start to fill your information <a href="signup.php">here.</a></p>
+            </div>
+            <div class="step">
+                <h1 class="num">2</h1>
+                <h2>Upload Links</h2>
+                <p>After signing up, log in to Get-Viewed, then add and configure your YouTube links, you can add one or more links, and there are a lot of exciting options that are waiting for you to explore.</p>
+            </div>
+            <div class="step">
+                <h1 class="num">3</h1>
+                <h2>Earning GVC</h2>
+                <p>Viewe other users uploads. By viewing the globally uploaded links, with each of your views, you will earn some GVC into your account.</p>
+            </div>
+            <div class="step">
+                <h1 class="num">4</h1>
+                <h2>Receive Viewes</h2>
+                <p>Get-Viewed will automatically use your GVC to deliver viewes to your videos that you have added. You can relax now and leave Get-Viewed will do your work, as well as you can change your links any time.</p>
+            </div>
+        </div>
     </div>
 </body>
 

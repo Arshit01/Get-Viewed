@@ -17,19 +17,33 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #3f4855;
+    background-color: #6d7c92;
 }
 
 .banner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin-top: 100px;
+    padding: 40px;
+    background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(249, 241, 165) 33%, rgb(0, 0, 0) 66%, rgb(249, 241, 165) 100%);
+    background-size: 400% 400%;
+    animation: errorBg 10s linear infinite;
+}
+
+@keyframes errorBg {
+    0% {
+        background-position: 100% 0%
+    }
+
+    100% {
+        background-position: 25% 100%
+    }
 }
 
 .banner *:not(i) {
     margin: 3vh;
-    color: #009df6;
+    color: #fff;
 }
 
 .banner h1 {
@@ -43,7 +57,11 @@ body {
 .banner a {
     text-decoration: none;
     color: #00c9b7;
-    font-size: 18px;
+    font-size: 22px;
+}
+
+.banner a i {
+    font-size: 20px;
 }
 
 .floating {
@@ -78,7 +96,7 @@ body {
     margin: 20px;
 }
 
-#about h1 {
+.heading {
     color: #009df6;
     text-shadow: 1px 1px #fff;
     text-decoration: underline;
@@ -86,9 +104,54 @@ body {
     text-decoration-color: #fff;
     text-decoration-thickness: 1.5px;
     font-family: 'Barkentina';
+    margin-bottom: 50px;
 }
 
 #about p {
     font-family: 'Courgette', 'cursive';
     font-size: 1.6em;
+}
+
+#hiw {
+    text-align: center;
+}
+
+.how {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 100px;
+}
+
+.step {
+    width: 240px;
+    padding: 0 15px;
+    margin: 0 30px;
+    user-select: none;
+}
+
+.step:hover {
+    border-radius: 10px;
+    background: #72839b;
+    box-shadow: 27px 27px 54px #616f84, -27px -27px 54px #8397b2;
+}
+
+.num {
+    font-size: 80px;
+    line-height: 6vw;
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 3.5vw #8BFDFE;
+    color: #67fcff;
+}
+
+.step h2 {
+    font-family: 'Barkentina';
+    margin: 15px;
+}
+
+.step p {
+    font-size: 20px;
+}
+
+.step p a {
+    text-decoration: none;
+    color: #00c9b7;
 }

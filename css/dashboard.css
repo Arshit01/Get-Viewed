@@ -1,0 +1,63 @@
+.bs-example {
+    margin: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-header {
+    font-size: 3em;
+}
+
+.table {
+    text-align: center;
+}
+
+.table td {
+    padding: 15px;
+}
+
+.table thead td {
+    background-color: #54585d;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2em;
+    border: 1px solid #54585d;
+}
+
+.table tbody td {
+    color: #636363;
+    border: 1px solid #dddfe1;
+    font-size: 1.5em;
+}
+
+.table tbody td a {
+    text-decoration: none;
+    color: #000;
+}
+
+.table tbody tr {
+    background-color: #f9fafb;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.input-field {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    margin: 30px;
+}
+
+.input-field input {
+    width: 25%;
+}
+
+.button input {
+    width: 100%;
+}

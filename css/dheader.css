@@ -1,0 +1,76 @@
+@import "https://fonts.fontstorage.com/import/ahellya.css";
+
+/*
+    Ahellya, 400, 400 italic
+*/
+.user {
+    cursor: pointer;
+    color: #00c9b7;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.sub-menu {
+    background: linear-gradient(to top, #3f4855, #3a4350, #343d4a, #2f3845, #2a3340);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.sub-menu::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 65%;
+    width: 0;
+    height: 0;
+    border: 13px solid transparent;
+    border-bottom-color: #2a3340;
+    border-top: 0;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 12px 0;
+    transition: transform 0.5s;
+    color: #000;
+}
+
+.sub-menu-link p {
+    width: 100%;
+    font-family: 'Ahellya';
+    color: #00c9b7;
+}
+
+.sub-menu-link i {
+    width: 25px;
+    background: #e5e5e5;
+    border-radius: 35%;
+    padding: 10px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+}
+
+.sub-menu-link:hover {
+    transform: translateX(10px);
+}

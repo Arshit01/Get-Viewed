@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'gv';
-    src: url('../fonts/gv.eot?a4t1x8');
-    src: url('../fonts/gv.eot?a4t1x8#iefix') format('embedded-opentype'),
-        url('../fonts/gv.ttf?a4t1x8') format('truetype'),
-        url('../fonts/gv.woff?a4t1x8') format('woff'),
-        url('../fonts/gv.svg?a4t1x8#gv') format('svg');
+    src: url('../fonts/gv.eot?la7w0b');
+    src: url('../fonts/gv.eot?la7w0b#iefix') format('embedded-opentype'),
+        url('../fonts/gv.ttf?la7w0b') format('truetype'),
+        url('../fonts/gv.woff?la7w0b') format('woff'),
+        url('../fonts/gv.svg?la7w0b#gv') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -26,10 +26,26 @@ i {
     font-size: 15px;
 }
 
-.gv-signup:before {
+.gv-edit-profile:before {
     content: "\e900";
 }
 
-.gv-login:before {
+.gv-help:before {
     content: "\e901";
+}
+
+.gv-login:before {
+    content: "\e902";
+}
+
+.gv-logout:before {
+    content: "\e903";
+}
+
+.gv-settings:before {
+    content: "\e904";
+}
+
+.gv-signup:before {
+    content: "\e905";
 }
