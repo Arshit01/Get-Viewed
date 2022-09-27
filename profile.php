@@ -43,11 +43,10 @@
                         <h2 class="pull-left">Your Videos Url</h2>
                     </div>
                     <?php
-$result = mysqli_query($con,"SELECT link_url FROM user_data WHERE u_id = " . $_SESSION['UID']);
-?>
-                    <?php
-if (mysqli_num_rows($result) > 0) {
-?>
+                        $result = mysqli_query($con,"SELECT link_url FROM user_data WHERE u_id = " . $_SESSION['UID']);
+
+                        if (mysqli_num_rows($result) > 0) {
+                    ?>
                     <table class='table'>
                         <thead>
                             <tr>
@@ -55,23 +54,23 @@ if (mysqli_num_rows($result) > 0) {
                             </tr>
                         </thead>
                         <?php
-$i=0;
-while($row = mysqli_fetch_array($result)) {
-?>
+                            $i=0;
+                            while($row = mysqli_fetch_array($result)) {
+                        ?>
                         <tr>
                             <td> <a href="<?php echo $row["link_url"]; ?>" target="_blank"><?php echo $row["link_url"]; ?></a></td>
                         </tr>
                         <?php
-$i++;
-}
-?>
+                                $i++;
+                            }
+                        ?>
                     </table>
                     <?php
-}
-else{
-echo "No result found";
-}
-?>
+                        }
+                        else {
+                            echo "No result found";
+                        }
+                    ?>
                 </div>
 </body>
 
