@@ -30,12 +30,11 @@
     <?php
         include 'config.php';
      ?>
-     <form class="" action="index.html" method="POST">
-         <div class="input-field">
-             <input type="text" name="url" placeholder="Enter url here" required>
-             <div class="button">
-                 <input type="submit" value="Add" name="add">
-             </div>
+     <form action="add.php" method="POST">
+         <div class="form-group">
+             <span>Url</span>
+             <input class="form-field" type="text" name="url" placeholder="Enter url here" required>
+             <input class="form-button" type="submit" value="Add" name="add">
          </div>
      </form>
     <div class="bs-example">
