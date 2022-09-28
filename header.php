@@ -29,6 +29,7 @@
                     <li class="nav-list-item"><a href="#about">About</a></li>
                     <li class="nav-list-item"><a href="#hiw">How it works ?</a></li>
                     <li class="nav-list-item"><a href="#">Pricing</a></li>
+                    <li class="nav-list-item"><a href="#">Our Team</a></li>
                     <li class="nav-list-item"><a href="#">Contact</a></li>
                 </ul>
             </div>

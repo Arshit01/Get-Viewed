@@ -1,6 +1,10 @@
 <?php
 
     session_start();
+    if (!isset($_SESSION['UID'])) {
+            header('location: index.php');
+            die();
+    }
     include 'config.php';
 
     if (isset($_POST['add'])) {

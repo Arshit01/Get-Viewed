@@ -1,3 +1,27 @@
+.info {
+    background: #e2e2e2;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.wrap label {
+    color: #f95424;
+    padding: 10px;
+}
+
+.wrap p {
+    color: #558723;
+}
+
 .bs-example {
     margin: 20px;
     margin-top: 100px;

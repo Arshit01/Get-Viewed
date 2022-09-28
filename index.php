@@ -71,6 +71,12 @@
             </div>
         </div>
     </div>
+    <div id="pricing">
+        <h1 class="heading">Pricing</h1>
+        <div class="price">
+            
+        </div>
+    </div>
 </body>
 
 </html>
