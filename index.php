@@ -16,7 +16,6 @@
     <link rel="icon" type="image/png" href="img/favicon.ico" />
 
     <!-- JavaScript -->
-    <!-- <script src="js\bootstrap.min.js" type="text/javascript"></script> -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -73,10 +72,129 @@
     </div>
     <div id="pricing">
         <h1 class="heading">Pricing</h1>
-        <div class="price">
-            
+        <div id="container">
+            <div class="pricetab">
+                <h1>FREE</h1>
+                <div class="price">
+                    <h2>Free</h2>
+                </div>
+                <div class="infos">
+                    <h3>24/7 Online Support</h3>
+                    <h3>No Premium Profile Listing</h3>
+                    <h3>100 Uploads</h3>
+                    <h3>Free 100 GVC</h3>
+                    <h3>0 Bonus GVC every month</h3>
+                    <h3>Non Customizable Profile Page</h3>
+                    <h3>1 month support</h3>
+                </div>
+                <div class="pricefooter">
+                    <div class="button">
+                        <a href="#">Get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricetab">
+                <h1>STARTER</h1>
+                <div class="price">
+                    <h2>10$</h2>
+                </div>
+                <div class="infos">
+                    <h3>24Hr Support</h3>
+                    <h3>Premium Profile Listing</h3>
+                    <h3>15,000 Uploads</h3>
+                    <h3>10,000 GVC</h3>
+                    <h3>15 Bonus GVC every month</h3>
+                    <h3>Customizable Profile Page</h3>
+                    <h3>3 months support</h3>
+                </div>
+                <div class="pricefooter">
+                    <div class="button">
+                        <a href="#">Get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricetab">
+                <h1>BASIC</h1>
+                <div class="price">
+                    <h2>25$</h2>
+                </div>
+                <div class="infos">
+                    <h3>24Hr Support</h3>
+                    <h3>Premium Profile Listing</h3>
+                    <h3>50,000 Uploads</h3>
+                    <h3>80,000 GVC</h3>
+                    <h3>30 Bonus GVC every month</h3>
+                    <h3>Customizable Profile Page</h3>
+                    <h3>8 months support</h3>
+                </div>
+                <div class="pricefooter">
+                    <div class="button">
+                        <a href="#">Get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricetabpre pricetab">
+                <h1>PREMIUM</h1>
+                <div class="pricepre price">
+                    <h2>55$</h2>
+                </div>
+                <div class="infos">
+                    <h3>24Hr Support</h3>
+                    <h3>Premium Profile Listing</h3>
+                    <h3>Unlimited Uploads</h3>
+                    <h3>1,00,000 GVC</h3>
+                    <h3>60 Bonus GVC every month</h3>
+                    <h3>Customizable Profile Page</h3>
+                    <h3>1 year support</h3>
+                </div>
+                <div class="pricefooterpre">
+                    <div class="buttonpre button">
+                        <a href="#">Get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricetab">
+                <h1>VIP</h1>
+                <div class="price">
+                    <h2>100$</h2>
+                </div>
+                <div class="infos">
+                    <h3>24Hr Support</h3>
+                    <h3>Premium Profile Listing</h3>
+                    <h3>Unlimited Uploads</h3>
+                    <h3>5,00,000 GVC</h3>
+                    <h3>120 Bonus GVC every month</h3>
+                    <h3>Customizable Profile Page</h3>
+                    <h3>5 year support</h3>
+                </div>
+                <div class="pricefooter">
+                    <div class="button">
+                        <a href="#">Get started</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div id="team">
+        <h1 class="heading">Our Team</h1>
+        <div class="wrap">
+            <div class="item">
+                <img src="img/Vivek.jpg" alt="team">
+                <div class="overlay">
+                    <h4>Vivek Dholakiya</h4>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/Arshit.jpg" alt="team">
+                <div class="overlay">
+                    <h4>Vora Arshit</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+        include 'footer.php';
+     ?>
 </body>
 
 </html>
