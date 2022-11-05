@@ -13,12 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css" type="text/css" />
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -46,7 +41,7 @@
                             while($row = mysqli_fetch_array($result)) {
                         ?>
                         <tr>
-                            <td> <a href="<?php echo $row["link_url"]; ?>" target="_blank"><?php echo $row["link_url"]; ?></a></td>
+                            <td> <a href="javascript:void(0)" data-url="<?= $row["link_url"]; ?>" class="view-url" ><?= $row["link_url"]; ?></a></td>
                         </tr>
                         <?php
                                 $i++;
@@ -63,3 +58,22 @@
 </body>
 
 </html>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //$('[data-toggle="tooltip"]').tooltip();
+
+        $(".view-url").on("click",function(){
+            var getUrl = $(this).data('url');
+
+            $.ajax({
+              type: "POST",
+              url: "viewed.php",
+              data:{'getUrl':getUrl},
+              cache: false, 
+              success: function(result){
+                window.open(getUrl, '_blank');
+              },
+            });
+        });
+    });
+</script>
