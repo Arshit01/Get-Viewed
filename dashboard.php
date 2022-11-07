@@ -71,7 +71,7 @@
               data:{'getLID':getLID, 'getUID':getUID},
               cache: false,
               success: function(result) {
-                window.open(getUrl, '_blank');
+                window.open(getUrl, '_self');
               },
             });
         });
