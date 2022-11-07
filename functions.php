@@ -123,4 +123,17 @@ function add() {
 
 if (isset($_POST['add'])) {
     add();
-}    
+}
+
+function viewed() {
+    session_start();
+    include 'config.php';
+
+    $lid = $_POST['getLID'];
+    $uid = $_SESSION['UID'];
+
+    $insert = "INSERT INTO `viewed`(`link_id`, `u_id`) VALUES ($lid, $uid)";
+    $res = mysqli_query($con, $insert);
+}
+
+viewed();

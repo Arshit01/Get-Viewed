@@ -26,7 +26,7 @@
                         <h2 class="pull-left">Global Videos Url</h2>
                     </div>
                     <?php
-                        $result = mysqli_query($con,"SELECT link_url FROM user_data WHERE u_id NOT IN(" . $_SESSION['UID'] . ") AND link_id NOT IN(SELECT link_id FROM viewed WHERE u_id = " . $_SESSION['UID'] . ")");
+                        $result = mysqli_query($con,"SELECT * FROM user_data WHERE u_id NOT IN(" . $_SESSION['UID'] . ") AND link_id NOT IN(SELECT link_id FROM viewed WHERE u_id = " . $_SESSION['UID'] . ")");
 
                         if (mysqli_num_rows($result) > 0) {
                     ?>
@@ -41,7 +41,7 @@
                             while($row = mysqli_fetch_array($result)) {
                         ?>
                         <tr>
-                            <td> <a href="javascript:void(0)" data-url="<?= $row["link_url"]; ?>" class="view-url" ><?= $row["link_url"]; ?></a></td>
+                            <td> <a href="javascript:void(0)" data-lid="<?= $row["link_id"]; ?>" class="view-url" ><?= $row["link_url"]; ?></a></td>
                         </tr>
                         <?php
                                 $i++;
@@ -60,17 +60,16 @@
 </html>
 <script type="text/javascript">
     $(document).ready(function() {
-        //$('[data-toggle="tooltip"]').tooltip();
-
         $(".view-url").on("click",function(){
-            var getUrl = $(this).data('url');
+            var getUrl = $(this).html();
+            var getLID = $(this).data('lid');
 
             $.ajax({
               type: "POST",
-              url: "viewed.php",
-              data:{'getUrl':getUrl},
-              cache: false, 
-              success: function(result){
+              url: "functions.php",
+              data:{'getLID':getLID},
+              cache: false,
+              success: function(result) {
                 window.open(getUrl, '_blank');
               },
             });
