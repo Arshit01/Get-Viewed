@@ -130,10 +130,13 @@ function viewed() {
     include 'config.php';
 
     $lid = $_POST['getLID'];
-    $uid = $_SESSION['UID'];
+    $uid = $_POST['getUID'];
+    $id = $_SESSION['UID'];
 
-    $insert = "INSERT INTO `viewed`(`link_id`, `u_id`) VALUES ($lid, $uid)";
-    $res = mysqli_query($con, $insert);
+    $query = "INSERT INTO `viewed`(`link_id`, `u_id`) VALUES ($lid, $id);";
+    $query .= "UPDATE `users` SET `GVC` = `GVC`+1 WHERE `u_id` = $id;";
+    $query .= "UPDATE `users` SET `GVC` = `GVC`-2 WHERE `u_id` = $uid";
+    $res = mysqli_multi_query($con, $query);
 }
 
 viewed();

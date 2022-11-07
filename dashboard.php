@@ -41,7 +41,7 @@
                             while($row = mysqli_fetch_array($result)) {
                         ?>
                         <tr>
-                            <td> <a href="javascript:void(0)" data-lid="<?= $row["link_id"]; ?>" class="view-url" ><?= $row["link_url"]; ?></a></td>
+                            <td> <a href="javascript:void(0)" data-uid="<?= $row["u_id"]; ?>"  data-lid="<?= $row["link_id"]; ?>" class="view-url" ><?= $row["link_url"]; ?></a></td>
                         </tr>
                         <?php
                                 $i++;
@@ -63,11 +63,12 @@
         $(".view-url").on("click",function(){
             var getUrl = $(this).html();
             var getLID = $(this).data('lid');
+            var getUID = $(this).data('uid');
 
             $.ajax({
               type: "POST",
               url: "functions.php",
-              data:{'getLID':getLID},
+              data:{'getLID':getLID, 'getUID':getUID},
               cache: false,
               success: function(result) {
                 window.open(getUrl, '_blank');
