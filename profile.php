@@ -57,7 +57,7 @@
              <p><?php echo $GVC; ?></p>
          </div>
      </div>
-     <form action="add.php" method="POST">
+     <form action="functions.php" method="POST">
          <div class="form-group">
              <span>Url</span>
              <input class="form-field" type="text" name="url" placeholder="Enter url here" required>
