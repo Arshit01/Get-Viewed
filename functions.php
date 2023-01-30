@@ -1,7 +1,7 @@
 <?php 
 
 function SignUp() {
-include 'config.php';
+    include 'config.php';
 
     $uname = $_POST['uname'];
     $email = $_POST['email'];

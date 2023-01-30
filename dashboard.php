@@ -26,7 +26,8 @@
                         <h2 class="pull-left">Global Videos Url</h2>
                     </div>
                     <?php
-                        $result = mysqli_query($con,"SELECT * FROM user_data WHERE u_id NOT IN(" . $_SESSION['UID'] . ") AND link_id NOT IN(SELECT link_id FROM viewed WHERE u_id = " . $_SESSION['UID'] . ")");
+                        $select = "SELECT * FROM `user_data` WHERE `u_id` NOT IN(" . $_SESSION['UID'] . ") AND link_id NOT IN(SELECT `link_id` FROM `viewed` WHERE `u_id` = " . $_SESSION['UID'] . ")";
+                        $result = mysqli_query($con, $select);
 
                         if (mysqli_num_rows($result) > 0) {
                     ?>
